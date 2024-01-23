@@ -22,3 +22,5 @@ yarn-error.log
 .DS_Store
 numanaslam302_ssh_key1
 numanaslam302_ssh_key1.pub
+key_ssh_git
+key_ssh_git.pub
