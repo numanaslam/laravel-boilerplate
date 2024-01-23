@@ -1,0 +1,10 @@
+{
+  "config": {
+    "path": {
+      "src": "../resources/theme"
+    },
+    "dist": [
+      "../public/assets"
+    ]
+  }
+}

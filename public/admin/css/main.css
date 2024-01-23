@@ -1,0 +1,32 @@
+
+/**
+
+Customization to AdminLTE
+
+**/
+.invalid-feedback {
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+    color: #dc3545;
+}
+.card-body, .card-footer{
+    padding: 0.75rem;
+}
+div.dataTables_wrapper div.dataTables_filter {
+    text-align: right;
+    display: none;
+}
+.breadcrumb-item+.breadcrumb-item {
+    padding-left: 0.15rem;
+}
+.content-header .breadcrumb {
+
+    line-height: 0.25rem;
+
+    font-size: 70%;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    padding-right: 0.15rem;
+}
