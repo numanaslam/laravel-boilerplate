@@ -9,7 +9,7 @@
         <!-- Preloader -->
         @include('admin.partials.preloader')
 
-       @include('admin.partials.topbar')
+        @include('admin.partials.topbar')
 
         <!-- Main Sidebar Container -->
         @include('admin.partials.sidebar')
@@ -21,11 +21,11 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">User Profile</h1>
+                            <h1 class="m-0">Edit Order</h1>
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="{{ url('dashboard') }}">Dashboard</a></li>
-                                <li class="breadcrumb-item active"><a href="{{ url('users') }}">Users</a></li>
-                                <li class="breadcrumb-item active">User Profile</li>
+                                <li class="breadcrumb-item active"><a href="{{ url('orders') }}">Orders</a></li>
+                                <li class="breadcrumb-item active">Edit</li>
                             </ol>
                         </div><!-- /.col -->
                         <div class="col-sm-6 text-right">
@@ -44,13 +44,18 @@
                     </div>
 
                     <div class="row mb-8">
-                    <div class="col-12">
+                        <div class="col-12">
+                            <form class="form w-100" novalidate="novalidate" id="notes_form" method="POST"
+                                action="{{ url('orders/edit_store/' . $orders->id) }}">
+
+                                {{ @csrf_field() }}
+                                @include('admin.orders.editfields')
+                            </form>
+
+                        </div>
 
 
-                    </div>
-
-
-                </div><!-- /.container-fluid -->
+                    </div><!-- /.container-fluid -->
             </section>
             <!-- /.content -->
         </div>
@@ -61,7 +66,24 @@
     @include('admin.partials.scripts')
     <script>
         $(document).ready(function() {
+            $("#notes_form").submit(function(e) {
+                var err = false;
+                var title = $("#name").val();
+                var content = $("#email").val();
+                if (title == '') {
+                    $('#title_err').html("Name Cannot be empty");
+                    err = true;
+                }
+                if (content == '') {
+                    $('#content_err').html("Email Cannot be empty");
+                    err = true;
+                }
 
+                if (err == true) {
+
+                    e.preventDefault();
+                }
+            });
         });
     </script>
 </body>

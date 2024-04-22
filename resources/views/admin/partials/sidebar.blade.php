@@ -17,35 +17,10 @@
 
 
                 <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
+                    <a href="{{url('categories')}}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
-                           New Order
-                            {{-- <span class="right badge badge-danger">New</span> --}}
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Orders
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Services
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Add Funds
+                            Categories
                         </p>
                     </a>
                 </li>
@@ -59,24 +34,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="pages/layout/top-nav.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Services</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Categories</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/layout/boxed.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Orders</p>
-                            </a>
-                        </li>
+
                         <li class="nav-item">
                             <a href="{{ url('users') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>

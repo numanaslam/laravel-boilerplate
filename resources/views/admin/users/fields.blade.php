@@ -130,7 +130,7 @@
                 <!--begin::Col-->
                 <div class="col-md-6 fv-row fv-plugins-icon-container">
                     <!--begin::Label-->
-                    <label class="required fs-5 fw-semibold">user_name</label>
+                    <label class="required fs-5 fw-semibold">User Name</label>
                     <!--end::Label-->
                     <!--begin::Input-->
                     {!! Form::text('user_name', $users->nick_name ? $users->user_name : old('user_name'), [
@@ -153,7 +153,7 @@
                 <!--begin::Col-->
                 <div class="col-md-6 fv-row fv-plugins-icon-container">
                     <!--begin::Label-->
-                    <label class="required fs-5 fw-semibold">phone</label>
+                    <label class="required fs-5 fw-semibold">Phone</label>
                     <!--end::Label-->
                     <!--begin::Input-->
                     {{-- <input type="text" class="form-control form-control-solid" placeholder="name" id="name" --}}
@@ -176,7 +176,7 @@
                 <!--begin::Col-->
                 <div class="col-md-6 fv-row fv-plugins-icon-container">
                     <!--begin::Label-->
-                    <label class="required fs-5 fw-semibold">access_level</label>
+                    <label class="required fs-5 fw-semibold">Access Level</label>
                     <!--end::Label-->
                     <!--begin::Input-->
 
@@ -202,33 +202,11 @@
                 <!--end::Col-->
             </div>
             <div class="row">
+
                 <!--begin::Col-->
-                <div class="col-md-6 fv-row fv-plugins-icon-container">
+                <div class="col-md-12 fv-row fv-plugins-icon-container">
                     <!--begin::Label-->
-                    <label class="required fs-5 fw-semibold">phone</label>
-                    <!--end::Label-->
-                    <!--begin::Input-->
-                    {{-- <input type="text" class="form-control form-control-solid" placeholder="name" id="name" --}}
-                    {{-- name="name" value="{{ old('name') }}"> --}}
-                    {!! Form::text('phone', $users->phone ? $users->phone : old('phone'), [
-                        'class' => 'form-control form-control-solid',
-                        'placeholder' => '',
-                    ]) !!}
-
-
-
-                    <!--end::Input-->
-                    <div class="fv-plugins-message-container invalid-feedback">
-                        @if ($errors->has('phone'))
-                            {{ $errors->first('phone') }}
-                        @endif
-                    </div>
-                </div>
-                <!--end::Col-->
-                <!--begin::Col-->
-                <div class="col-md-6 fv-row fv-plugins-icon-container">
-                    <!--begin::Label-->
-                    <label class="required fs-5 fw-semibold">address</label>
+                    <label class="required fs-5 fw-semibold">Address</label>
                     <!--end::Label-->
                     <!--begin::Input-->
 
@@ -255,97 +233,7 @@
 
             <hr />
 
-            <div class="row">
-                <!--begin::Col-->
-                <div class="col-md-6 fv-row fv-plugins-icon-container">
-                    <!--begin::Label-->
-                    <label class="required fs-5 fw-semibold">commission_upto_1000</label>
-                    <!--end::Label-->
-                    <!--begin::Input-->
 
-                    {!! Form::number('commission_upto_1000', $users->commission_upto_1000 ? $users->commission_upto_1000 : old('commission_upto_1000'), [
-                        'class' => 'form-control form-control-solid',
-                        'placeholder' => '',
-                    ]) !!}
-
-
-
-                    <!--end::Input-->
-                    <div class="fv-plugins-message-container invalid-feedback">
-                        @if ($errors->has('commission_upto_1000'))
-                            {{ $errors->first('commission_upto_1000') }}
-                        @endif
-                    </div>
-                </div>
-                <!--end::Col-->
-                <!--begin::Col-->
-                <div class="col-md-6 fv-row fv-plugins-icon-container">
-                    <!--begin::Label-->
-                    <label class="required fs-5 fw-semibold">Commission Above 1000</label>
-                    <!--end::Label-->
-                    <!--begin::Input-->
-
-                    {!! Form::number('commission_above_1000', $users->commission_above_1000 ? $users->commission_above_1000 : old('commission_above_1000'), [
-                        'class' => 'form-control form-control-solid',
-                        'placeholder' => '',
-                    ]) !!}
-
-
-                    <!--end::Input-->
-                    <div class="fv-plugins-message-container invalid-feedback">
-                        @if ($errors->has('commission_above_1000'))
-                            {{ $errors->first('commission_above_1000') }}
-                        @endif
-                    </div>
-                </div>
-                <!--end::Col-->
-            </div>
-
-            <div class="row">
-                <!--begin::Col-->
-                <div class="col-md-6 fv-row fv-plugins-icon-container">
-                    <!--begin::Label-->
-                    <label class="required fs-5 fw-semibold">Mail Email</label>
-                    <!--end::Label-->
-                    <!--begin::Input-->
-
-                    {!! Form::text('mail_email', $users->mail_email ? $users->mail_email : old('mail_email'), [
-                        'class' => 'form-control form-control-solid',
-                        'placeholder' => '',
-                    ]) !!}
-
-
-
-                    <!--end::Input-->
-                    <div class="fv-plugins-message-container invalid-feedback">
-                        @if ($errors->has('mail_email'))
-                            {{ $errors->first('mail_email') }}
-                        @endif
-                    </div>
-                </div>
-                <!--end::Col-->
-                <!--begin::Col-->
-                <div class="col-md-6 fv-row fv-plugins-icon-container">
-                    <!--begin::Label-->
-                    <label class="required fs-5 fw-semibold">Mail Password</label>
-                    <!--end::Label-->
-                    <!--begin::Input-->
-
-                    {!! Form::text('mail_password', $users->mail_password ? $users->mail_password : old('mail_password'), [
-                        'class' => 'form-control form-control-solid',
-                        'placeholder' => '',
-                    ]) !!}
-
-
-                    <!--end::Input-->
-                    <div class="fv-plugins-message-container invalid-feedback">
-                        @if ($errors->has('mail_password'))
-                            {{ $errors->first('mail_password') }}
-                        @endif
-                    </div>
-                </div>
-                <!--end::Col-->
-            </div>
             <div class="row">
                 <div class="col-md-6 fv-row fv-plugins-icon-container">
                     <!--begin::Label-->

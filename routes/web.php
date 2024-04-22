@@ -1,27 +1,13 @@
 <?php
 
-use App\Http\Controllers\BankAccountsController;
-use App\Http\Controllers\BankPaymentsController;
-use App\Http\Controllers\BookingPaymentsController;
-use App\Http\Controllers\BookingsController;
-use App\Http\Controllers\BookingTicketsController;
-use App\Http\Controllers\CCChargeRequestsController;
-use App\Http\Controllers\ConsolidatorPaymentsController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\UserNotesController;
-use App\Http\Controllers\ConsolidatorsController;
-use App\Http\Controllers\CustomersController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\NotificationsController;
-use App\Http\Controllers\EnquiryController;
-use App\Http\Controllers\ReportsController;
 use App\Http\Controllers\RolesController;
-use App\Http\Controllers\SubscribersController;
-use App\Http\Controllers\AgentCommissionController;
 use App\Http\Controllers\CategoriesController;
-use App\Http\Controllers\EnquiryFollowupController;
-use App\Http\Controllers\FilesController;
+use App\Http\Controllers\FundsController;
+use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\PermissionsController;
+use App\Http\Controllers\ServicesController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -62,13 +48,7 @@ Route::middleware(['auth'])->group(function () {
 
 
 
-    Route::get('categories', [CategoriesController::class, 'index']);
-    Route::get('categories/datatable', [CategoriesController::class, 'datatable']);
-    Route::get('categories/add', [CategoriesController::class, 'add']);
-    Route::post('categories/store', [CategoriesController::class, 'store']);
-    Route::get('categories/edit/{id}', [CategoriesController::class, 'edit']);
-    Route::post('categories/edit_store/{id}', [CategoriesController::class, 'edit_store']);
-    Route::get('categories/delete/{id}', [CategoriesController::class, 'delete']);
+
 
 
 
@@ -97,5 +77,39 @@ Route::middleware(['auth'])->group(function () {
     Route::get('users/delete/{id}', [UserController::class, 'delete']);
     Route::get('users/profile/{id}', [UserController::class, 'profile']);
     Route::get('users/settings/{id}', [UserController::class, 'settings']);
+
+    Route::get('categories', [CategoriesController::class, 'index']);
+    Route::get('categories/datatable', [CategoriesController::class, 'datatable']);
+    Route::get('categories/add', [CategoriesController::class, 'add']);
+    Route::post('categories/store', [CategoriesController::class, 'store']);
+    Route::get('categories/edit/{id}', [CategoriesController::class, 'edit']);
+    Route::post('categories/edit_store/{id}', [CategoriesController::class, 'edit_store']);
+    Route::get('categories/delete/{id}', [CategoriesController::class, 'delete']);
+
+
+    Route::get('services', [ServicesController::class, 'index']);
+    Route::get('services/datatable', [ServicesController::class, 'datatable']);
+    Route::get('services/add', [ServicesController::class, 'add']);
+    Route::post('services/store', [ServicesController::class, 'store']);
+    Route::get('services/edit/{id}', [ServicesController::class, 'edit']);
+    Route::post('services/edit_store/{id}', [ServicesController::class, 'edit_store']);
+    Route::get('services/delete/{id}', [ServicesController::class, 'delete']);
+
+    Route::get('funds', [FundsController::class, 'index']);
+    Route::get('funds/datatable', [FundsController::class, 'datatable']);
+    Route::get('funds/add', [FundsController::class, 'add']);
+    Route::post('funds/store', [FundsController::class, 'store']);
+    Route::get('funds/edit/{id}', [FundsController::class, 'edit']);
+    Route::post('funds/edit_store/{id}', [FundsController::class, 'edit_store']);
+    Route::get('funds/delete/{id}', [FundsController::class, 'delete']);
+    Route::get('funds/details/{id}', [FundsController::class, 'details']);
+
+    Route::get('orders', [OrdersController::class, 'index']);
+    Route::get('orders/datatable', [OrdersController::class, 'datatable']);
+    Route::get('orders/add', [OrdersController::class, 'add']);
+    Route::post('orders/store', [OrdersController::class, 'store']);
+    Route::get('orders/edit/{id}', [OrdersController::class, 'edit']);
+    Route::post('orders/edit_store/{id}', [OrdersController::class, 'edit_store']);
+    Route::get('orders/delete/{id}', [OrdersController::class, 'delete']);
 
 });

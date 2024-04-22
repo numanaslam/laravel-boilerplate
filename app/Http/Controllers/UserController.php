@@ -213,11 +213,7 @@ class UserController extends Controller
         $data['nick_name'] = $request->input('nick_name');
         $data['user_name'] = $request->input('user_name');
         $data['address'] = $request->input('address');
-        $data['commission_upto_1000'] = $request->input('commission_upto_1000') ? $request->input('commission_upto_1000') : 0.0;
-        $data['commission_above_1000'] = $request->input('commission_above_1000') ? $request->input('commission_above_1000') : 0.0;
         $data['access_level'] = $request->input('access_level');
-        $data['mail_email'] = $request->input('mail_email');
-        $data['mail_password'] = $request->input('mail_password');
         $data['is_active'] = $request->has('is_active') ? 1 : 0;
         $data['address'] = $request->input('address');
         $data['updated_by'] =  Auth::user()->id;
