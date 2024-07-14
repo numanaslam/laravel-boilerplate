@@ -2,7 +2,17 @@
 
 #### Usage
 
-This is not a package - it's a full Laravel project that you should use as a starter boilerplate, and then add your own custom functionality. 
+This is not a package - it's a full Laravel project that you should use as a starter boilerplate, and then add your own custom functionality. This boilerplate has following CRUD features.
+```
+Dashboard
+Users
+Permissions
+Roles
+Categories
+Orders
+Services
+Funds
+```
 
 ##### Server Deployment Scripts
 ```
